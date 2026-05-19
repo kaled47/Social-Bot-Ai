@@ -13,7 +13,7 @@ class Mensaje(BaseModel):
 # Endpoint webhook
 @app.post("/webhook")
 async def webhook(data: Mensaje):
-    
+    # respuesta con IA
     respuesta = generar_respuesta(data.mensaje)
 
     print("Mensaje recibido:", data.mensaje)
